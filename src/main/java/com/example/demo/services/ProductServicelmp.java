@@ -15,8 +15,7 @@ class ProductServiceImpl implements ProductService {
     private final ProductRepository productRepository;
     private static final int LOW_STOCK_THRESHOLD = 10;
 
-    @Autowired
-    public ProductServiceImpl(ProductRepository productRepository) {
+     public ProductServiceImpl(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
 

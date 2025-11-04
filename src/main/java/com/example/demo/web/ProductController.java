@@ -20,8 +20,7 @@ public class ProductController {
         this.productService = productService;
     }
 
-    // ✅ GET : récupérer tous les produits
-    @GetMapping
+     @GetMapping
     public ResponseEntity<List<Product>> getAllProducts() {
         try {
             List<Product> products = productService.findAll();
@@ -31,8 +30,7 @@ public class ProductController {
         }
     }
 
-    // ✅ GET : récupérer un produit par ID
-    @GetMapping("/{id}")
+     @GetMapping("/{id}")
     public ResponseEntity<?> getProductById(@PathVariable Long id) {
         try {
             return productService.findById(id)
